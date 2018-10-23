@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
+const port = process.env.PORT || 3000;
 
 hbs.registerPartials(`${__dirname}/views/partials`)
 app.set('view engine', 'hbs');
@@ -31,6 +32,6 @@ app.get('/about', (req, res) => {
 });
 
 
-app.listen(3000, function() {
-  console.log('server started');
+app.listen(port, function() {
+  console.log(`server started on port: ${port}`);
 });
