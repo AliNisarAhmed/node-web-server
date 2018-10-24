@@ -31,6 +31,9 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs');
+})
 
 app.listen(port, function() {
   console.log(`server started on port: ${port}`);
